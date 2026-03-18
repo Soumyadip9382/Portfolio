@@ -1,0 +1,219 @@
+/* ========== EXPERIENCE SECTION ========== */
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 50px;
+  font-size: 16px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Two Column Layout for Experience & Education */
+.experience-education-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 40px;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.experience-column,
+.education-column {
+  flex: 1;
+}
+
+.column-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Timeline Divider */
+.timeline-divider {
+  width: 2px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  position: relative;
+  margin: 0 10px;
+}
+
+/* Experience Timeline */
+.experience-timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.experience-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.experience-dot {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: var(--primary-color);
+  border: 4px solid var(--bg-white);
+  border-radius: 50%;
+  flex-shrink: 0;
+  top: 5px;
+  z-index: 2;
+}
+
+.experience-dot.education-dot {
+  background: var(--accent-color);
+}
+
+.experience-content {
+  background: var(--bg-white);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  flex: 1;
+}
+
+.experience-content:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+.experience-content h4 {
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.company-info .company,
+.company-info .location,
+.company-info .gpa {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.experience-content .year {
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.experience-content p {
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  color: var(--text-light);
+  font-size: 13px;
+}
+
+.achievements-list li {
+  padding: 5px 0;
+  color: var(--text-light);
+}
+
+/* Certifications & Awards Section */
+.certifications-section {
+  background: linear-gradient(135deg, rgba(110, 89, 245, 0.05), rgba(236, 72, 153, 0.05));
+  padding: 50px 30px;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(110, 89, 245, 0.2);
+  margin-top: 60px;
+}
+
+.section-subtitle-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.certification-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--bg-white);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border-left: 4px solid var(--primary-color);
+}
+
+.certification-item:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateX(5px);
+}
+
+.cert-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.certification-item p {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .experience-education-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .timeline-divider {
+    display: none;
+  }
+
+  .column-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certification-item {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .certification-item p {
+    font-size: 14px;
+  }
+}
+
